@@ -78,5 +78,72 @@
       ],
       "image": "/assets/images/beef_stir_fry.jpg"
     }
+  ],
+  "details": [
+    {
+      "id": 1,
+      "prepTime": 7200000,
+      "cuisine": "Italian",
+      "diet": "Vegetarian",
+      "url": "/assets/images/spaghetti.jpg",
+      "nutrition": {
+        "calories": 450,
+        "fat": 15,
+        "carbs": 70,
+        "protein": 10
+      }
+    },
+    {
+      "id": 2,
+      "prepTime": 5200000,
+      "cuisine": "Mexican",
+      "diet": "Paleo",
+      "url": "/assets/images/chicken_tikka_masala.jpg",
+      "nutrition": {
+        "calories": 950,
+        "fat": 35,
+        "carbs": 70,
+        "protein": 10
+      }
+    },
+    {
+      "id": 3,
+      "prepTime": 2200000,
+      "cuisine": "American",
+      "diet": "Paleo",
+      "url": "/assets/images/chocolate_chip_cookies.jpg",
+      "nutrition": {
+        "calories": 550,
+        "fat": 45,
+        "carbs": 90,
+        "protein": 10
+      }
+    },
+    {
+      "id": 4,
+      "prepTime": 2200000,
+      "cuisine": "American",
+      "diet": "Paleo",
+      "url": "/assets/images/caprese_salad.jpg",
+      "nutrition": {
+        "calories": 950,
+        "fat": 35,
+        "carbs": 70,
+        "protein": 10
+      }
+    },
+    {
+      "id": 5,
+      "prepTime": 2200000,
+      "cuisine": "American",
+      "diet": "Paleo",
+      "url": "/assets/images/beef_stir_fry.jpg",
+      "nutrition": {
+        "calories": 950,
+        "fat": 35,
+        "carbs": 70,
+        "protein": 10
+      }
+    }
   ]
 }

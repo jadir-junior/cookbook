@@ -1,0 +1,26 @@
+.recipe-image-container {
+  position: relative;
+  height: 292px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.recipe-image {
+  border-radius: 8px;
+  width: 406px;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.recipe-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  align-items: start;
+}
+
+.recipe-information {
+  background-color: #fefcfa;
+  height: 100%;
+  padding: 24px 16px;
+}

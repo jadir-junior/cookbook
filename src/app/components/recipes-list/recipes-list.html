@@ -1,7 +1,7 @@
-@if (recipes()) {
+@if (loading()) {
   <div class="recipes-list">
-    @for (item of recipes(); track item.id) {
-      <div class="item">
+    @for (item of recipes; track item.id) {
+      <div class="item" (click)="goToDetailsPage(item.id)">
         <app-recipe-item [recipe]="item"></app-recipe-item>
       </div>
     }

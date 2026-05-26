@@ -1,5 +1,18 @@
-@if (loading()) {
-  <p>Carregando receitas...</p>
-} @else {
-  <app-recipes-list [recipes]="recipes"></app-recipes-list>
-}
+<div>
+  <p-iconfield>
+    <p-inputicon class="pi pi-search"></p-inputicon>
+    <input type="text" #searchNameInput pInputText placeholder="Search recipes by name" />
+  </p-iconfield>
+
+  <p-iconfield>
+    <p-inputicon class="pi pi-search"></p-inputicon>
+    <input
+      type="text"
+      #searchIngredientInput
+      pInputText
+      placeholder="Search recipes by ingredient"
+    />
+  </p-iconfield>
+</div>
+
+<router-outlet></router-outlet>
