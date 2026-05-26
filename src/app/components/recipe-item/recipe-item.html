@@ -1,7 +1,20 @@
-<div class="mb-4 p-8">
-  <p-card [header]="recipe()?.name">
+<div class="mb-4 p-8 flex items-center justify-center">
+  <p-card [style]="{ width: '280px', overflow: 'hidden' }">
+    <ng-template #header>
+      <div class="recipe-image-container">
+        <img mat-card-image class="recipe-image" [alt]="recipe()?.name" [src]="recipe()?.image" />
+      </div>
+    </ng-template>
+    <ng-template #title>
+      {{ recipe()?.name }}
+    </ng-template>
     <p class="m-0">
       {{ recipe()?.description }}
     </p>
+    <div class="card flex items-center gap-2 flex-wrap">
+      @for (ingredient of recipe()?.ingredients; track ingredient) {
+        <p-chip [label]="ingredient"></p-chip>
+      }
+    </div>
   </p-card>
 </div>

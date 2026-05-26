@@ -29,7 +29,8 @@
                 "glob": "**/*",
                 "input": "public"
               },
-              "public/mockServiceWorker.js"
+              "public/mockServiceWorker.js",
+              "public/assets"
             ],
             "styles": ["src/styles.scss"]
           },
