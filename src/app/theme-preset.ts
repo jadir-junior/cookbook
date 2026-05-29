@@ -10,5 +10,13 @@ export const CookbookPreset = definePreset(Aura, {
         borderRadius: '8px',
       },
     },
+    inputtext: {
+      css: ({ dt }) => `
+      .p-inputtext::placeholder {
+        font-size: 0.8rem;
+        font-weight: 600;
+      }
+      `,
+    },
   },
 });

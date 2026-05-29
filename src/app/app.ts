@@ -14,10 +14,11 @@ import {
   switchMap,
 } from 'rxjs';
 import { RouterOutlet } from '@angular/router';
+import { ToolbarModule } from 'primeng/toolbar';
 
 @Component({
   selector: 'app-root',
-  imports: [IconFieldModule, InputIconModule, InputTextModule, RouterOutlet],
+  imports: [IconFieldModule, InputIconModule, InputTextModule, RouterOutlet, ToolbarModule],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })

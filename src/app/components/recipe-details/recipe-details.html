@@ -1,6 +1,6 @@
 @if (loading()) {
   <div class="recipe-layout">
-    <div style="border-right: 2px solid #f3f4f4" class="px-8 flex gap-10">
+    <div style="border-right: 2px solid #f3f4f4" class="p-8 flex gap-10">
       <div class="recipe-image-container">
         <img [src]="details?.url" [alt]="recipe?.name" class="recipe-image" />
       </div>
@@ -17,7 +17,7 @@
         <p>{{ recipe?.description }}</p>
       </div>
     </div>
-    <div class="recipe-information px-6 py-10">
+    <div class="recipe-information px-6 py-8">
       <app-nutrition-details [nutrition]="details?.nutrition"></app-nutrition-details>
     </div>
   </div>

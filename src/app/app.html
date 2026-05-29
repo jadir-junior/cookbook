@@ -1,18 +1,17 @@
-<div>
-  <p-iconfield>
-    <p-inputicon class="pi pi-search"></p-inputicon>
-    <input type="text" #searchNameInput pInputText placeholder="Search recipes by name" />
-  </p-iconfield>
-
-  <p-iconfield>
-    <p-inputicon class="pi pi-search"></p-inputicon>
-    <input
-      type="text"
-      #searchIngredientInput
-      pInputText
-      placeholder="Search recipes by ingredient"
-    />
-  </p-iconfield>
-</div>
+<p-toolbar>
+  <div class="ml-6">
+    <p-iconfield>
+      <p-inputicon class="pi pi-search"></p-inputicon>
+      <input
+        class="p-searchtext"
+        type="text"
+        #searchNameInput
+        pInputText
+        placeholder="Search recipes, ingredients or cuisines..."
+        style="width: 386px; border-color: #bfbebe"
+      />
+    </p-iconfield>
+  </div>
+</p-toolbar>
 
 <router-outlet></router-outlet>
