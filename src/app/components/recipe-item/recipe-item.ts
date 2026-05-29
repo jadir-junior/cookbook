@@ -12,4 +12,5 @@ import { ChipModule } from 'primeng/chip';
 })
 export class RecipeItem {
   recipe = input<Recipe>();
+  image = input<string>();
 }

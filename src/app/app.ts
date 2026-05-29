@@ -15,10 +15,18 @@ import {
 } from 'rxjs';
 import { RouterOutlet } from '@angular/router';
 import { ToolbarModule } from 'primeng/toolbar';
+import { ToastModule } from 'primeng/toast';
 
 @Component({
   selector: 'app-root',
-  imports: [IconFieldModule, InputIconModule, InputTextModule, RouterOutlet, ToolbarModule],
+  imports: [
+    IconFieldModule,
+    InputIconModule,
+    InputTextModule,
+    RouterOutlet,
+    ToolbarModule,
+    ToastModule,
+  ],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
@@ -32,39 +40,37 @@ export class App implements AfterViewInit {
   constructor(private recipesService: Recipes) {}
 
   ngAfterViewInit(): void {
-    const searchNameInputValue$ = fromEvent<InputEvent>(
-      this.searchNameInputElement()?.nativeElement,
-      'input',
-    ).pipe(
-      map((searchInput: InputEvent) => (searchInput.target as HTMLInputElement).value),
-      startWith(''),
-    );
-
-    const searchIngredientInputValue$ = fromEvent<InputEvent>(
-      this.searchIngredientInputElement()?.nativeElement,
-      'input',
-    ).pipe(
-      map((searchInput: InputEvent) => (searchInput.target as HTMLInputElement).value),
-      startWith(''),
-    );
-
-    combineLatest({
-      searchName: searchNameInputValue$,
-      searchIngredient: searchIngredientInputValue$,
-    })
-      .pipe(
-        debounceTime(500),
-        distinctUntilChanged(
-          (prev, curr) =>
-            prev.searchName === curr.searchName && prev.searchIngredient === curr.searchIngredient,
-        ),
-        switchMap(({ searchName, searchIngredient }) =>
-          this.recipesService.searchRecipes$(searchName, searchIngredient),
-        ),
-      )
-      .subscribe((recipes) => {
-        this.recipes = recipes;
-        this.loading.set(false);
-      });
+    // const searchNameInputValue$ = fromEvent<InputEvent>(
+    //   this.searchNameInputElement()?.nativeElement,
+    //   'input',
+    // ).pipe(
+    //   map((searchInput: InputEvent) => (searchInput.target as HTMLInputElement).value),
+    //   startWith(''),
+    // );
+    // const searchIngredientInputValue$ = fromEvent<InputEvent>(
+    //   this.searchIngredientInputElement()?.nativeElement,
+    //   'input',
+    // ).pipe(
+    //   map((searchInput: InputEvent) => (searchInput.target as HTMLInputElement).value),
+    //   startWith(''),
+    // );
+    // combineLatest({
+    //   searchName: searchNameInputValue$,
+    //   searchIngredient: searchIngredientInputValue$,
+    // })
+    //   .pipe(
+    //     debounceTime(500),
+    //     distinctUntilChanged(
+    //       (prev, curr) =>
+    //         prev.searchName === curr.searchName && prev.searchIngredient === curr.searchIngredient,
+    //     ),
+    //     switchMap(({ searchName, searchIngredient }) =>
+    //       this.recipesService.searchRecipes$(searchName, searchIngredient),
+    //     ),
+    //   )
+    //   .subscribe((recipes) => {
+    //     this.recipes = recipes;
+    //     this.loading.set(false);
+    //   });
   }
 }

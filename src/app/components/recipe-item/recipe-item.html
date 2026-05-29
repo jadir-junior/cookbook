@@ -1,19 +1,25 @@
-<div class="mb-4 p-8 flex items-center justify-center">
-  <p-card [style]="{ width: '280px', overflow: 'hidden' }">
+<div class="my-4">
+  <p-card [style]="{ overflow: 'hidden' }">
     <ng-template #header>
       <div class="recipe-image-container">
-        <img mat-card-image class="recipe-image" [alt]="recipe()?.name" [src]="recipe()?.image" />
+        @if (image()) {
+          <img mat-card-image class="recipe-image" [alt]="recipe()?.name" [src]="image()" />
+        } @else {
+          <img mat-card-image class="recipe-image" src="/assets/images/image-placeholder.png" />
+        }
       </div>
     </ng-template>
     <ng-template #title>
-      {{ recipe()?.name }}
+      <span class="text-lg font-semibold"> {{ recipe()?.name }} </span>
     </ng-template>
-    <p class="m-0">
+    <p class="mb-2 text-sm">
       {{ recipe()?.description }}
     </p>
     <div class="card flex items-center gap-2 flex-wrap">
       @for (ingredient of recipe()?.ingredients; track ingredient) {
-        <p-chip [label]="ingredient"></p-chip>
+        <p-chip class="p-chip-warn">
+          <span class="text-xs">{{ ingredient }}</span>
+        </p-chip>
       }
     </div>
   </p-card>

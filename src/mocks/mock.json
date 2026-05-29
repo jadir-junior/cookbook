@@ -145,5 +145,27 @@
         "protein": 10
       }
     }
+  ],
+  "images": [
+    {
+      "id": 1,
+      "url": "/assets/images/spaghetti.jpg"
+    },
+    {
+      "id": 2,
+      "url": "/assets/images/chicken_tikka_masala.jpg"
+    },
+    {
+      "id": 3,
+      "url": "/assets/images/chocolate_chip_cookies.jpg"
+    },
+    {
+      "id": 4,
+      "url": "/assets/images/caprese_salad.jpg"
+    },
+    {
+      "id": 5,
+      "url": "/assets/images/beef_stir_fry.jpg"
+    }
   ]
 }

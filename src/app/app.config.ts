@@ -6,6 +6,7 @@ import { routes } from './app.routes';
 
 import { provideHttpClient } from '@angular/common/http';
 import { CookbookPreset } from './theme-preset';
+import { MessageService } from 'primeng/api';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -18,5 +19,6 @@ export const appConfig: ApplicationConfig = {
         options: {},
       },
     }),
+    MessageService,
   ],
 };

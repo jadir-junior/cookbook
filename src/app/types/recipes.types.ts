@@ -21,3 +21,8 @@ export interface Nutrition {
   carbs: number;
   protein: number;
 }
+
+export interface ImageUrl {
+  id: number;
+  url: string;
+}
