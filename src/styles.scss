@@ -1,15 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+// @layer theme, primeng, tailwind, component, utilities;
+
+@use 'tailwindcss';
+
+@layer tailwind-base, primeng, tailwind-utilities;
+
+@layer tailwind-base {
+  @tailwind base;
+}
+
+@layer tailwind-utilities {
+  @tailwind components;
+  @tailwind utilities;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap');
 
 html,
 body {
   font-family: 'Inter', sans-serif;
+
+  p {
+    color: #5f6368;
+  }
 }
 
 .recipe-title {
   font-family: 'DM Serif Display', serif;
+  color: #1e1e1e;
 }
 
 .w-full {
   width: 100%;
+}
+
+.p-chip-warn.p-chip {
+  background-color: #fff1e3;
+  color: #e58a2b;
+  font-weight: 700;
+}
+
+.p-chip-neutro.p-chip {
+  background: #f4f4f2;
+  color: #6b7280;
+  font-weight: 700;
 }

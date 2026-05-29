@@ -4,8 +4,8 @@ import { providePrimeNG } from 'primeng/config';
 
 import { routes } from './app.routes';
 
-import Aura from '@primeuix/themes/aura';
 import { provideHttpClient } from '@angular/common/http';
+import { CookbookPreset } from './theme-preset';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -14,7 +14,8 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(),
     providePrimeNG({
       theme: {
-        preset: Aura,
+        preset: CookbookPreset,
+        options: {},
       },
     }),
   ],

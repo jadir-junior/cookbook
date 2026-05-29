@@ -1,19 +1,23 @@
 @if (loading()) {
   <div class="recipe-layout">
-    <div style="display: flex; gap: 16px; border-right: 2px solid #f3f4f4">
+    <div style="border-right: 2px solid #f3f4f4" class="px-8 flex gap-10">
       <div class="recipe-image-container">
         <img [src]="details?.url" [alt]="recipe?.name" class="recipe-image" />
       </div>
       <div>
-        <div>
-          <p-chip [label]="prepTime"></p-chip>
-          <p-chip [label]="details?.cuisine"></p-chip>
+        <div class="flex gap-2">
+          <p-chip class="p-chip-warn">
+            <span class="text-xs">{{ prepTime }}</span>
+          </p-chip>
+          <p-chip class="p-chip-neutro">
+            <span class="text-xs">{{ details?.cuisine }}</span>
+          </p-chip>
         </div>
-        <h1 class="recipe-title">{{ recipe?.name }}</h1>
+        <h1 class="recipe-title text-4xl font-semibold mb-4">{{ recipe?.name }}</h1>
         <p>{{ recipe?.description }}</p>
       </div>
     </div>
-    <div class="recipe-information">
+    <div class="recipe-information px-6 py-10">
       <app-nutrition-details [nutrition]="details?.nutrition"></app-nutrition-details>
     </div>
   </div>
